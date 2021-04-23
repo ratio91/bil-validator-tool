@@ -1,0 +1,51 @@
+module.exports =  {
+  parser: '@typescript-eslint/parser',
+  extends: [
+    'airbnb-typescript',
+    'airbnb/hooks',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
+    'eslint-config-prettier',
+  ],
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx:  true,
+    },
+    project: "./tsconfig.json"
+  },
+  rules: {
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/naming-convention": "off",
+    "arrow-body-style": "off",
+    "arrow-parens": "off",
+    "implicit-arrow-linebreak": "off",
+    "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off",
+    "import/prefer-default-export": "off",
+    "lines-between-class-members": "off",
+    "max-classes-per-file": "off",
+    "no-param-reassign": "off",
+    "no-plusplus": "off",
+    "no-return-await": "off",
+    "no-underscore-dangle": "off",
+    "operator-linebreak": "off",
+    "react/forbid-prop-types": "off",
+    "react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
+    "react/no-unescaped-entities": "off",
+    "react/prefer-stateless-function": "off",
+    "react/require-default-props": "off",
+    "react/prop-types": 0,
+  },
+  settings:  {
+    react:  {
+      version:  'detect',
+    },
+  },
+};

@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.build.json",
+
+  "compilerOptions": {
+    "plugins": [{ "name": "typescript-plugin-css-modules" }],
+    "baseUrl": "./",
+    "outDir": "./dist"
+  },
+
+  "include": [
+    "src/**/*"
+  ]
+}

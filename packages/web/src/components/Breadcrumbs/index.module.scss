@@ -1,0 +1,70 @@
+@import '../../variables';
+
+.stepper {
+  color: rgb(78, 78, 78);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .stepper {
+    display: none;
+  }
+}
+
+.step {
+  cursor: pointer;
+  text-align: center;
+  width: 120px;
+
+  span {
+    font-size: 24px;
+    font-weight: bolder;
+    line-height: 0.5px;
+  }
+
+  a {
+    color: rgb(78, 78, 78);
+  }
+
+  a:hover {
+    color: rgb(78, 78, 78);
+    text-decoration: none;
+  }
+}
+
+.stepCircle {
+  background-color: $white;
+  border: 4px solid rgb(78, 78, 78);
+  border-radius: 50%;
+  display: inline-block;
+  height: 30px;
+  text-align: center;
+  width: 30px;
+}
+
+.activeCrumb .stepCircle {
+  background: rgb(78, 78, 78);
+  border-color: $featured-color;
+  color: $featured-color;
+}
+
+.stepLine {
+  border-top: 4px rgb(78, 78, 78) solid;
+  height: 1px;
+  margin-left: -17px;
+  margin-right: -17px;
+  margin-top: 14px;
+  width: 100%;
+  z-index: -1; // hide behind circles
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 960px;
+  padding: 20px;
+}

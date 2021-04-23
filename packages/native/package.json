@@ -1,0 +1,120 @@
+{
+  "name": "@bil-validator-tool/native",
+  "version": "0.2.0",
+  "description": "A frontend for validating CMRs crafted with React",
+  "author": "ASE-SS-2020 Group 01",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "prepare": "yarn --cwd ../api/ build && copyfiles -u 3 ../api/dist/* app/api && cross-env BASE_PATH=./ USE_HASH_HISTORY=true yarn --cwd ../web/ build:prod && copyfiles -u 3 ../web/dist/* app/web",
+    "build:prod": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.prod.babel.js",
+    "electron": "electron ./app/main.prod.js",
+    "package": "yarn build:prod && electron-builder build --mac --win --linux",
+    "package:win": "yarn build:prod && electron-builder build --win",
+    "package:linux": "yarn build:prod && electron-builder build --linux",
+    "package:mac": "yarn build:prod && electron-builder build --mac",
+    "lint": "eslint \"./src/**/*.{js,jsx,ts,tsx}\"",
+    "lintformat": "eslint \"./src/**/*.{js,jsx,ts,tsx}\" --fix",
+    "prettify": "prettier --write \"./src/**/*.{js,jsx,ts,tsx}\"",
+    "format": "yarn prettify && yarn lintformat",
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --watch --passWithNoTests",
+    "tsc:type-check": "tsc -b tsconfig.build.json",
+    "tsc:type-check:watch": "tsc -b tsconfig.build.json --watch",
+    "tsc:clean": "tsc --build --clean",
+    "reset": "yarn tsc:clean && rimraf .cache dist coverage",
+    "reset:hard": "yarn reset && rimraf node_modules ../../node_modules tsconfig.build.tsbuildinfo yarn-error.log .eslintcache && yarn install",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "build": {
+    "productName": "BIL Validator Tool",
+    "appId": "bil.validator",
+    "asar": false,
+    "files": [
+      "web",
+      "api",
+      "main.prod.js"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "mac": {
+      "target": [
+        "default"
+      ]
+    },
+    "win": {
+      "target": [
+        "dir"
+      ]
+    },
+    "linux": {
+      "executableName": "checkEcmr",
+      "desktop": {
+        "Terminal": "false"
+      },
+      "target": [
+        "AppImage"
+      ]
+    }
+  },
+  "dependencies": {
+    "@bil-validator-tool/api": "0.2.0",
+    "source-map-support": "^0.5.16"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-typescript": "^7.9.0",
+    "@babel/register": "^7.9.0",
+    "@nestjs/cli": "^7.1.2",
+    "@nestjs/schematics": "^7.0.0",
+    "@nestjs/testing": "^7.0.7",
+    "@types/express": "^4.17.4",
+    "@types/jest": "^25.1.4",
+    "@types/lodash": "^4.14.149",
+    "@types/node": "^13.9.8",
+    "@types/request": "^2.48.4",
+    "@types/request-promise-native": "^1.0.17",
+    "@types/uuid": "^7.0.2",
+    "@types/validator": "^12.0.1",
+    "@types/webpack-env": "^1.15.1",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "babel-loader": "^8.1.0",
+    "concurrently": "^5.1.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "copyfiles": "^2.2.0",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "electron": "8.2.0",
+    "electron-builder": "^22.4.1",
+    "electron-debug": "^3.0.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-typescript": "^7.2.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^25.2.4",
+    "prettier": "^2.0.2",
+    "rimraf": "^3.0.2",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.2.2",
+    "ts-node": "^8.8.1",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "resolutions": {
+    "webpack-sources": "^1.1.0"
+  }
+}

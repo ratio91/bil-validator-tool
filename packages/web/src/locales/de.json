@@ -1,0 +1,269 @@
+{
+  "Help": {
+    "Introduction": {
+      "title": "Einführung in das ValidatorTool",
+      "text": "Das ValidatorTool ist ein Programm zur Validierung von eCMR-Dokumenten. Das heißt, mit dem ValidatorTool können Sie sicherstellen, dass ein eCMR-Dokument, das Ihnen entweder in gedruckter Form oder digital als PDF-Datei vorliegt, nicht gefälscht ist."
+    },
+    "ValidatePdf": {
+      "title": "eCMR als PDF validieren",
+      "text": "Wenn Ihnen das zu validierende eCMR-Dokument als PDF-Datei auf Ihrem Gerät vorliegt, gehen Sie wie folgt vor:",
+      "list": {
+        "1": "Navigieren Sie zur Validierungsseite, indem Sie auf den Link \"ValidatorTool\" in der Navigationsleiste klicken.",
+        "2": "Klicken Sie auf \"PDF hochladen\".",
+        "3": "Wählen Sie daraufhin im erscheinenden Dateiauswahldialog die PDF-Datei des eCMR-Dokuments, das Sie validieren möchten.",
+        "4": "Wenn die Validität des Dokuments bestätigt werden kann, dann werden Sie auf die nächste Seite weitergeleitet und Sie sehen eine grüne Infobox, die Ihnen die erfolgreiche Validierung bestätigt. Ihr Dokument ist nicht gefälscht oder verändert worden.",
+        "5": "Wenn Probleme auftreten, werden Sie nicht weitergeleitet und es erscheint stattdessen eine rote Infobox, die weitere Information gibt. Dies kann beispielsweise durch einen fehlgeschlagenen Verbindungsaufbau verursacht werden oder falls das ValidatorTool die Validität des Dokuments nicht bestätigen kann. Dies tritt auf, wenn das Dokument nicht erkannt wird oder gefälscht ist. Folgende Grafik zeigt das Verhalten des ValidatorTool, wenn die von Ihnen hochgeladene Datei keine PDF-Datei eines gültigen eCMR-Dokuments ist."
+      }
+    },
+    "ValidatePrinted": {
+      "title": "Gedruckten eCMR validieren",
+      "text": "Wenn Ihnen das zu validierende eCMR-Dokument in gedruckter Form vorliegt, gehen Sie wie folgt vor:",
+      "list": {
+        "1": "Navigieren Sie zur Validierungsseite, indem Sie auf den Link \"ValidatorTool\" in der Navigationsleiste klicken wie im vorigen Abschnitt gezeigt.",
+        "2": "Füllem Sie die eCMR-ID und den Pin-Code des Dokuments in die entsprechenden Formularfelder ein. Die eCMR-ID und Pin-Code finden Sie unter dem Dokumenten Titel im Feld \"eCMR\".",
+        "3": "Klicken Sie auf \"Weiter\". Folgende Abbildung zeigt das Formular mit Beispielwerten und der Schaltfläche \"Weiter\".",
+        "4": "Wenn das ValidatorTool einen eCMR mit der eingegebenen eCMR-ID und dem Pin-Code findet, dann werden Sie auf die nächste Seite weitergeleitet und Sie sehen eine gelbe Infobox, die Ihnen mitteilt, dass Sie nun die online abgerufenen Werte mit Ihrem Dokument vergleichen können. Sie müssen nun selbstständig die Daten abgleichen, um festzustellen ob Ihr gedrucktes eCMR korrekt ist. Sollten Sie Abweichungen erkennen, enthält Ihr Dokument Fehler oder es ist gefälscht.",
+        "5": "Wenn Probleme auftreten, werden Sie nicht weitergeleitet und es erscheint stattdessen eine rote Infobox, die weitere Information enthält. Dies kann beispielsweise durch eine Falscheingabe von CMR-ID/Pin-Code oder fehlgeschlagenen Verbindungsaufbau verursacht werden oder falls ValidatorTool die Validität des Dokuments nicht bestätigen kann. Folgende Grafik zeigt das Verhalten des ValidatorTool, wenn es zur von Ihnen angegebenen CMR-ID und zum Pin-Code online keinen entsprechenden Datensatz findet."
+      }
+    },
+    "Web": {
+      "SetLanguage": {
+        "title": "Spracheinstellung",
+        "text": "Klicken Sie auf die Flagge rechts oben in der Navigationsleiste und wählen Sie die gewünschte Sprache aus."
+      }
+    },
+    "Electron": {
+      "note": "Anmerkung: Die Grafiken zur Validierung zeigen die Navigationsleiste der Webversion. In Ihrer Desktop Version von ValidatorTool sehen Sie in dieser Leiste statt der Flagge den Link \"Einstellungen\", welcher in den letzten beiden Abschnitten dieser Hilfeseite behandelt wird.",
+      "Language": {
+        "title": "Spracheinstellung",
+        "list": {
+          "1": "Um die Sprache zu ändern, navigieren Sie zu den Einstellungen, indem Sie auf den Link \"Einstellungen\" in der Navigationsleiste klicken.",
+          "2": "Klicken Sie nun auf die Flagge und wählen Sie die gewünschte Sprache aus."
+        }
+      },
+      "CustomNode": {
+        "title": "Benutzerdefinierter Node",
+        "list": {
+          "1": "Um einen eigenen Ethereum Node einzusetzen, navigieren Sie zu den Einstellungen indem Sie auf den Link \"Einstellungen\" in der Navigationsleiste klicken wie im vorigen Abschnitt gezeigt.",
+          "2": "Klicken Sie auf die Checkbox mit der Beschriftung \"Eigener Ethereum Node\".",
+          "3": "Geben Sie nun die Adresse Ihres gewünschten Ethereum Nodes ein und klicken Sie auf \"Speichern\"."
+        },
+        "note": "Achtung: Aus Sicherheitsgründen sollten Sie diese Einstellung nur dann verändern, wenn Sie dem von Ihnen angegebenen Ethereum Node wirklich vertrauen!"
+      }
+    },
+    "backButtonLabel": "Zurück zur Validierungsseite"
+  },
+  "NewValidation": {
+    "ValidatePdf": {
+      "title": "Prüfen eines eCMR-PDFs",
+      "uploadButtonLabel": "PDF hochladen"
+    },
+    "ValidatePrinted": {
+      "title": "Prüfen eines gedruckten eCMR-Dokuments",
+      "infobox": "Die eCMR-ID und den Pin-Code finden Sie unter dem Dokumenten Titel im Feld \"eCMR\". Brauchen Sie Hilfe? Schauen Sie auf unsere",
+      "infoboxDetailedExplanation": "detaillierte Erklärung!"
+    },
+    "IdPinForm": {
+      "cmrNoLabel": "eCMR-ID",
+      "cmrNoToolTip": "Die 20-stellige eCMR-ID finden Sie im PDF unter dem Dokumenten Titel im Feld \"eCMR\".",
+      "cmrNoPlaceholder": "eCMR-ID",
+      "pinLabel": "Pin-Code",
+      "pinToolTip": "Den 5-stellige PIN-Code finden Sie im PDF unter dem Dokumenten Titel im Feld \"eCMR\".",
+      "pinPlaceholder": "Pin-Code"
+    },
+    "Errors": {
+      "IdPin": {
+        "badRequest": "ID oder Pin-Code haben das falsche Format. Prüfen Sie bitte, ob Sie diese richtig eingegeben haben."
+      },
+      "Pdf": {
+        "badRequest": "Ungültige Datei hochgeladen. Haben Sie die richtige Datei ausgewählt?"
+      },
+      "wrongIdOrPinCode": "Es konnte kein eCMR mit dieser ID und dem Pin-Code gefunden werden.",
+      "requestLimitReached": "Das Dokument mit dieser ID wurde zu oft aufgerufen. Bitte versuchen Sie es später noch einmal.",
+      "unexpected": "Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es später noch einmal.",
+      "hashMismatch": "Die Richtigkeit dieses Dokuments konnte nicht sichergestellt werden. Es könnte manipuliert worden sein.",
+      "unknownCompanyID": "ID konnte keinem bekannten Unternehmen zugewiesen werden. Bitte aktualisieren Sie die Applikation."
+    }
+  },
+  "CMRDisplay": {
+    "CMR": {
+      "title": "eCMR",
+      "statusLabel": "Status"
+    },
+    "Sender": {
+      "title": "1. Sender/ Absender"
+    },
+    "Consignee": {
+      "title": "2. Consignee/ Empfänger"
+    },
+    "PlaceOfDelivery": {
+      "title": "3. Place of delivery/ Auslieferort des Gutes"
+    },
+    "Takeover": {
+      "title": "4. Place and date of goods takover/ Ort und Tag der Übernahme des Gutes"
+    },
+    "Attachments": {
+      "attachmentLabel": "5. Attachments/ Beigefügte Dokumente",
+      "attachmentDescriptionLabel": "Beschreibung",
+      "attachmentNameLabel": "Name",
+      "noGiven": "Keine Anhänge gefunden."
+    },
+    "Load": {
+      "loadLabel": "6 - 12 Freight Details/ Frachtdetails",
+      "marksLabel": "6. Marks and Nos./ Kennzeichen & Nr.",
+      "numPackagesLabel": "7. Packs count/ Anzahl Pakete",
+      "packingMethodLabel": "8. Method of packing/ Art der Verpackung",
+      "goodsDescriptionLabel": "9. Goods Description/ Bezeichung des Gutes",
+      "grossWeightLabel": "11. Brutto Weight (kg)/ Bruttogew. (kg)",
+      "statNumberLabel": "10. Statistic number/ Statistiknr.",
+      "volumeLabel": "12. Volume (m³)/ Volumen (m³)"
+    },
+    "SenderInstructions": {
+      "title": "13. Sender Instructions/ Anweisungen des Absenders",
+      "noGiven": "Es wurden keine Anweisungen vom Sender angegeben."
+    },
+    "PaymentInstructions": {
+      "title": "14. Payment Instructions/ Frachtzahlungsanweisung",
+      "noGiven": "Es wurden keine Anweisungen zur Zahlung angegeben."
+    },
+    "Carrier": {
+      "title": "16. Carrier/ Frachtführer"
+    },
+    "SuccessiveCarrier": {
+      "title": "17. Successive Carrier/ Nachfolgender Frachtführer",
+      "noGiven": "Es wurde kein nachfolgender Träger angegeben."
+    },
+    "CarrierInstructions": {
+      "title": "18. Carrier Instructions/ Bemerkungen des Frachtführers"
+    },
+    "CarrierVehicles": {
+      "title": "Frächterfahrzeug",
+		"vehicleTypeLabel": "Vehicle Type/ Fahreugtyp",
+      "officialRegistrationLabel": "Licence plate/ Kennzeichen",
+      "iluCodeLabel": "ILU-Code",
+      "weightCapacityLabel": "Max. weight (kg)/ Max. Gewicht (kg)"
+    },
+    "SpecialAgreements": {
+      "title": "19. Special Agreements/ Besondere Vereinbarungen",
+      "noGiven": "Es wurden keine speziellen Übereinkommen ausgemacht."
+    },
+    "Established": {
+      "title": "21. Ausgefertigt in/am"
+    }
+  },
+  "CMRMetadata": {
+    "References": {
+      "title": "INTERNE REFERENZEN",
+      "common": "GEMEINSAME REFERENZEN"
+    },
+    "ChangeLog": {
+      "title": "CHANGELOG",
+      "noGiven": "Keine Änderungen gefunden.",
+      "timestampLabel": "Zeit",
+      "descriptionLabel": "Beschreibung",
+      "statusLabel": "Status",
+      "textLabel": "Information",
+      "PREPARE": "Das eCMR Dokument wurde vorbereitet",
+      "SENDER": "Ein Kommentar wurde verfasst zu 1 - Absender",
+      "CONSIGNEE": "Ein Kommentar wurde verfasst zu 2 - Empänger",
+      "PLACE_OF_DELIVERY": "Ein Kommentar wurde verfasst zu 3 - Auslieferungsort des Gutes",
+      "PLACE_AND_DATE_OF_TAKEOVER": "Ein Kommentar wurde verfasst zu 4 - Ort & Tag der Übernahme des Gutes",
+      "DOCUMENTS_ATTACHED": "Ein Kommentar wurde verfasst zu 5 - Attached Documents",
+      "MARKS": "Ein Kommentar wurde verfasst zu 6 - Kennzeichen und Nummern",
+      "NUMBER_OF_PACKAGES": "Ein Kommentar wurde verfasst zu 7 - Anzahl der Packstücke",
+      "METHOD_OF_PACKING": "Ein Kommentar wurde verfasst zu 8 - Art der Verpackung",
+      "NATURE_OF_GOODS": "Ein Kommentar wurde verfasst zu 9 - Bezeichnung des Gutes",
+      "STATISTICAL_NR": "Ein Kommentar wurde verfasst zu 10 - Statistiknummer",
+      "GROSS_WEIGHT": "Ein Kommentar wurde verfasst zu 11 - Bruttogewicht",
+      "VOLUME": "Ein Kommentar wurde verfasst zu 12 - Umfang",
+      "INSTRUCTIONS_OF_SENDER": "Ein Kommentar wurde verfasst zu 13 - Anweisungen des Absenders",
+      "PAYMENT_INSTRUCTIONS": "Ein Kommentar wurde verfasst zu 14 - Frachtzahlungsanweisungen",
+      "CARRIER": "Ein Kommentar wurde verfasst zu 16 - Frächter",
+      "SUCCESSIVE": "Ein nachfolgender Frächter wurde erfasst (17).",
+      "CARRIER_INSTRUCTIONS": "Ein Kommentar wurde verfasst zu 18 - Vorbehalte & Bemerkungen des Frachtführers",
+      "SPECIAL_AGREEMENTS": "Ein Kommentar wurde verfasst zu 19 - Besondere Vereinbarungen",
+      "TO_BE_PAID": "Ein Kommentar wurde verfasst zu 20 - Zu zahlen",
+      "ESTABLISHED_IN_AT": "Ein Kommentar wurde verfasst zu 21 - Ausgefertigt in",
+      "HANDOVER": "Das eCMR Dokument wurde weitergereicht",
+      "CARRIER_VEHICLES": "Ein Kommentar wurde verfasst zu 18 - Kfz Kennzeichen",
+      "OTHER_COMMENT": "Ein allgemeiner Kommentar wurde erfasst",
+      "CASE_OF_DAMAGE": "Eine Schadensmeldung wurde erfasst",
+      "SIGNATURE_OF_SENDER": "Der Absender hat den eCMR unterschieben (22)",
+      "SIGNATURE_OF_CARRIER": "Der Frachtführer hat den eCMR unterschieben(23)",
+      "FINALIZATION_BY_CONSIGNEE": "Der Empfänger hat den eCMR finalisiert (24)"
+    },
+    "Comments": {
+      "title": "KOMMENTARE",
+      "noGiven": "Es wurden keine Kommentare angegeben."
+    },
+    "DamageReport": {
+      "title": "SCHADENSREPORT",
+      "noGiven": "Es wurde kein Schäden angegeben."
+    },
+    "roleLabel": "Rolle",
+    "roles": {
+      "carrier": "Frächter",
+      "consignee": "Empfänger",
+      "driver": "Fahrer",
+      "forwarder": "Spediteur",
+      "sender": "Absender",
+      "unknown": "Unbekannt"
+    },
+    "attachment": "Anhänge:"
+  },
+  "Breadcrumbs": {
+    "homeLabel": "Start",
+    "page1Label": "eCMR",
+    "page2Label": "Appendix"
+  },
+  "Navbar": {
+    "toolLabel": "ValidatorTool",
+    "howDoesItWorkLabel": "Wie funktioniert das?",
+    "settingsLabel": "Einstellungen"
+  },
+  "NoPageError": {
+    "infoText": "Die gesuchte Seite wurde nicht gefunden...",
+    "homeLabel": "Zurück zur Startseite"
+  },
+  "CMRAlert": {
+    "Invalid": {
+      "alertMessage": "Es gibt Unterschiede zwischen Ihrem Dokument und dem gespeicherten Dokument!"
+    },
+    "ManualCheck": {
+      "alertMessage": "Wenn die angezeigten Daten so auf Ihrem Dokument stehen, ist Ihr Dokument richtig!",
+      "subMessage": "Bitte prüfen Sie manuell, ob die Daten stimmen!"
+    },
+    "Valid": {
+      "alertMessage": "Das eCMR-Dokument stimmt mit dem Dokument im System überein und ist gültig!",
+      "subMessage": "Die angezeigten Daten auf Ihrem Dokument stimmen mit den gespeicherten Daten überein."
+    }
+  },
+  "Ethereum": {
+    "Errors": {
+      "changeNode": "Ändern der Ethereum Node Adresse nicht möglich. Überprüfen Sie die Adresse und probieren sie es erneut.",
+      "unexpected": "Ein unerwarteter Fehler ist während dem Abrufen der Ethereum Node Adresse aufgetreten."
+    },
+    "success": "Ethereum Node erfolgreich geändert."
+  },
+  "Settings": {
+    "title": "Einstellungen",
+    "Language": {
+      "title": "Sprache"
+    },
+    "CustomEthereumNode": {
+      "title": "Eigener Ethereum Node",
+      "nodeAddressPlaceholder": "Node-Adresse",
+      "customNodeInactive": "Deaktiviert",
+      "customNodeActive": "Aktiviert",
+      "saveCustomNode": "Speichern"
+    }
+  },
+  "outdatedBrowserAlert": "Sie verwenden eine ältere Version von {{browser}}. Bitte laden Sie eine aktuellere {{browser}} Version herunter, damit die Webseite richtig funktioniert.",
+  "unsupportedBrowserAlert": "Sie verwenden einen ungetesteten Browser. Damit die Webseite richtig funktioniert, verwenden Sie bitte  Chrome, Edge, Firefox, Safari oder Internet Explorer.",
+  "unknownBrowserVersionAlert": "Die Browser Version konnte nicht ermittelt werden. Bitte verwenden Sie eine aktuelle Version von Ihrem Browser, damit die Webseite wie erwartet funktioniert.",
+  "unexpectedBrowserErrorAlert": "Ein unerwarteter Fehler ist aufgetretten.",
+  "nextButtonLabel": "Weiter",
+  "backButtonLabel": "Zurück",
+  "checkAnotherCMRButtonLabel": "Weitere eCMRs prüfen",
+  "orLabel": "ODER"
+}

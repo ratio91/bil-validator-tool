@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-sass-guidelines",
+    "stylelint-config-css-modules"
+  ],
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "ignoreFiles": ["**/*.{js,jsx,ts,tsx}"],
+  "rules": {
+    "value-keyword-case": null,
+    "selector-class-pattern": null,
+    "unit-blacklist": "pt"
+  }
+}

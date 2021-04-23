@@ -1,0 +1,48 @@
+version: '3.7'
+services:
+  validator-api:
+    image: bil-validator-api:latest
+    container_name: validator-api
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: ./packages/api/Dockerfile
+    ports:
+      - 8083:8083
+    environment:
+      SWAGGER_PATH: /swagger
+      LOGDIR_PATH: /tmp/validator/logs/
+      WEB_APP: 'true'
+
+  validator-web:
+    image: bil-validator-web:latest
+    container_name: validator-web
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: ./packages/web/Dockerfile
+    ports:
+      - 8082:8082
+    environment:
+        # must start with "/" or "http://" or "https://", but should not contain trailing slashes at the end
+        # at startup of the container, a script checks automatically if it is a "/" or something else and decides
+        # if the frontend-proxy-pass feature will be enabled or disabled
+        # additionally, this env-var specifies under which the proxy serves the given BACKEND_PROXY_URL
+        # default value: /validator-api
+        # this value is behind BASE_PATH
+        # BACKEND_URL: https://validator-api.estallio.at
+
+        # specifies the real url of the backend
+        # if BACKEND_URL is set to a relative url like "/validator-api", the proxy redirects calls to the domain given in this env-var
+        # if it's a real url, the proxy stays disabled and the backend is accessed directly by the browser - do not forget to enable cors if this is the case
+        # specify this url without trailing slashes for proxy pass as the reverse proxy adds the subpaths straight behind the domain
+        # default value: http://validator-api:8083
+        # BACKEND_PROXY_URL: http://validator-api:8083
+
+        # this env-var sets a base-path in the served application and should be set if the app is not
+        # served under the root location of a domain like it is the case in http://domain.com/validator
+        # subdomains should just work fine with the implemented fallback to the default "/" location of a domain
+        # this env-var requires a starting '/' like '/validator' but should not end with '/'
+        # server does not listen on the default url without slash like e.g. /validator, instead, all content should be redirected to /validator/
+        # default value: /
+        BASE_PATH: /

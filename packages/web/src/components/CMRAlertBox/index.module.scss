@@ -1,0 +1,41 @@
+.row {
+  align-items: center;
+}
+
+.alertBody {
+  display: flex;
+}
+
+.alertContent {
+  align-items: center;
+}
+
+.alertText {
+  font-size: 24px;
+  text-align: center;
+}
+
+.alertSymbol {
+  font-size: 60px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.alertSubtext {
+  font-size: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .alertText {
+    font-size: 18px;
+  }
+
+  .alertSymbol {
+    font-size: 40px;
+  }
+
+  .alertSubtext {
+    font-size: 15px;
+  }
+}

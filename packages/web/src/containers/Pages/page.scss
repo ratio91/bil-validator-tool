@@ -1,0 +1,29 @@
+@import '../../variables';
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 960px;
+  min-width: 300px;
+  padding: 20px;
+  word-break: break-word;
+}
+
+.alertWrapper {
+  position: static;
+}
+
+.box {
+  border: 1px solid $secondary-color;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+}

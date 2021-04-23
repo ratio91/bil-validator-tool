@@ -1,0 +1,23 @@
+@import '../page';
+
+.contentWrapper {
+  composes: contentWrapper;
+  max-width: 1100px;
+}
+
+.alertWrapper {
+  composes: contentWrapper;
+  position: static;
+}
+
+@media screen and (max-width: 600px) {
+  .alertWrapper {
+    margin: 20px;
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+  }
+}

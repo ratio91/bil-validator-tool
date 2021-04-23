@@ -1,0 +1,47 @@
+@import '../page';
+
+.textbox {
+  border: #aaa 1px solid;
+  border-radius: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-top: 10px;
+  padding: 4px;
+}
+
+.smallTextbox {
+  display: inline-block;
+  padding: 4px;
+}
+
+th {
+  font-size: x-small;
+}
+
+.buttonNav {
+  display: inline;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.nextButton {
+  float: right;
+  position: relative;
+}
+
+.displayRow .textbox {
+  display: inline-block;
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+
+.bigContainer {
+  display: inline-block;
+  width: 50%;
+}
+
+.carrierCard {
+  float: right;
+  width: 50%;
+}

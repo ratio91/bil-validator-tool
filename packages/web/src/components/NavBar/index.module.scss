@@ -1,0 +1,61 @@
+.navBar {
+  position: relative;
+  z-index: 5;
+}
+
+.brandLabel {
+  margin-left: 20px;
+}
+
+.flagImages img {
+  border-style: unset;
+  vertical-align: unset;
+}
+
+@media screen and (max-width: 270px) {
+  .brandLabel {
+    display: none;
+  }
+}
+
+.manualNav {
+  margin-right: auto;
+}
+
+.manualLabel {
+  margin-right: 20px;
+}
+
+.settingsLabel {
+  display: inline;
+}
+
+.manualIcon,
+.settingsIcon {
+  display: none;
+}
+
+.brandNav {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  .brandNav {
+    cursor: pointer;
+    margin-right: auto;
+  }
+
+  .manualNav {
+    margin-right: 0;
+  }
+
+  .manualLabel,
+  .settingsLabel {
+    display: none;
+  }
+
+  .manualIcon,
+  .settingsIcon {
+    display: inline;
+  }
+}

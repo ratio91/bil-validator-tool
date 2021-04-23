@@ -1,0 +1,42 @@
+{
+  "name": "@bil-validator-tool/monorepo",
+  "version": "0.2.0",
+  "description": "A tool for validating CMRs with help of the Ethereum blockchain.",
+  "author": "ASE Group 01",
+  "homepage": "",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/electron-builder",
+      "**/electron-builder/**",
+      "**/electron-webpack",
+      "**/electron-webpack/**",
+      "**/electron-debug/**",
+      "**/electron",
+      "**/electron/**"
+    ]
+  },
+  "scripts": {
+    "build": "lerna run build --stream",
+    "build:prod": "lerna run build:prod --stream",
+    "dev:api": "lerna run nest:dev --scope @bil-validator-tool/api --stream",
+    "dev:native": "lerna run electron --scope @bil-validator-tool/native --stream",
+    "dev:web": "lerna run dev --scope @bil-validator-tool/web --stream",
+    "package": "lerna run package --scope @bil-validator-tool/native --stream",
+    "lint": "lerna run lint --parallel --stream",
+    "format": "lerna run format --parallel --stream",
+    "test": "lerna run test --parallel --stream",
+    "reset": "lerna run reset --parallel --stream",
+    "docker:build": "docker-compose build",
+    "docker:run": "docker-compose up"
+  },
+  "devDependencies": {
+    "lerna": "4.0.0",
+    "typescript": "3.8.3"
+  },
+  "dependencies": {}
+}

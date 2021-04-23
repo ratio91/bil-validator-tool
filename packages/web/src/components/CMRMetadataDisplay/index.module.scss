@@ -1,0 +1,36 @@
+@import 'src/containers/Pages/page';
+@import 'src/containers/Pages/CMRPage/index.module';
+
+.referenceRole {
+  display: inline-block;
+  text-align: end;
+}
+
+.displayRow {
+  display: inline-flex;
+}
+
+.textbox h5 {
+  font-weight: bolder;
+}
+
+.extraTopMargin {
+  margin-top: 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.tableHeader {
+  font-size: 16px;
+}
+
+.smaller {
+  font-size: 14px;
+}
+
+.light {
+  color: $grey;
+  font-size: 12px;
+}

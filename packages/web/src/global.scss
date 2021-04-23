@@ -1,0 +1,43 @@
+/**
+  these styles are for styling the warning when javascript is disabled
+ **/
+.noscriptDiv {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+/**
+  general styles stating below
+ **/
+@import './variables';
+@import '~bootstrap/scss/bootstrap';
+
+.form-control {
+  font-weight: bold;
+}
+
+.col-form-label {
+  font-weight: bold;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.navbar,
+.navbar-brand {
+  font-size: 20px;
+}
+
+// taken from https://stackoverflow.com/questions/22457344/masking-input-characters-without-type-password
+// https://jsbin-user-assets.s3.amazonaws.com/rafaelcastrocouto/password.ttf
+@font-face {
+  font-family: 'password';
+  font-style: normal;
+  font-weight: 200;
+  // src: url('https://jsbin-user-assets.s3.amazonaws.com/rafaelcastrocouto/password.ttf');
+  src: url('./password.ttf');
+}

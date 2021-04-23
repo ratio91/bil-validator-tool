@@ -1,0 +1,58 @@
+@import '../../../variables';
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 960px;
+  padding: 20px;
+
+  h2,
+  h3 {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+
+  h2 {
+    margin-top: 30px;
+    text-align: left;
+  }
+
+  h3 {
+    margin-top: 22px;
+    text-align: left;
+  }
+}
+
+.note {
+  font-style: italic;
+  margin-top: 20px;
+}
+
+.screenshot {
+  border: 2px solid $black;
+  border-radius: 1px;
+  display: block;
+  margin: 10px auto;
+  max-width: 600px;
+
+  @media screen and (max-width: 660px) {
+    max-width: 100%;
+  }
+}
+
+.list {
+  @media screen and (max-width: 660px) {
+    padding-left: inherit;
+  }
+
+  li {
+    margin-top: 30px;
+  }
+}
+
+.backButton {
+  float: right;
+  margin-left: auto;
+  margin-top: 15px;
+}

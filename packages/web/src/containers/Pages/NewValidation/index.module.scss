@@ -1,0 +1,39 @@
+@import '../page';
+
+.orSeparator {
+  border-bottom-color: $secondary-color;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+  text-align: center;
+  width: 100%;
+
+  span {
+    background: #fff;
+    font-weight: bold;
+    padding: 0 10px;
+  }
+}
+
+.contentWrapper {
+  composes: contentWrapper;
+  max-width: 600px;
+}
+
+.alertWrapper {
+  composes: contentWrapper;
+  position: static;
+}
+
+@media screen and (max-width: 600px) {
+  .alertWrapper {
+    margin: 20px;
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+  }
+}

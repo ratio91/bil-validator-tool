@@ -1,0 +1,28 @@
+@import 'src/containers/Pages/page';
+@import 'src/containers/Pages/CMRPage/index.module';
+
+.displayRow {
+  display: inline-flex;
+}
+
+.smallBox {
+  display: inline-block;
+  padding: 4px;
+}
+
+.textbox h5 {
+  font-weight: bolder;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.tableHeader {
+  font-size: 16px;
+}
+
+.smallTextbox {
+  display: inline-block;
+  padding: 4px;
+}

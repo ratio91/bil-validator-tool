@@ -1,0 +1,5 @@
+{
+  "BDEV": "https://dev.docs4cargo.at/v1/ecmr/",
+  "EYAT": "https://test.docs4cargo.at/v1/ecmr/",
+  "TEST": "http://localhost:8080/v1/ecmr/"
+}
