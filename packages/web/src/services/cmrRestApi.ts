@@ -54,8 +54,8 @@ export const requestCmrByPdf = async (file: File) => {
   try {
     const data = new FormData();
     data.append('file', file);
-    // const response = await axios.post(`${withoutTrailingSlashes(backendUrl)}/ecmr/upload`, data, {});
-    return { res: true };
+    const res = await axios.post(`${withoutTrailingSlashes(backendUrl)}/ecmr/upload`, data, {});
+    return { res };
   } catch (error) {
     if (error.response) {
       switch (error.response.status) {
