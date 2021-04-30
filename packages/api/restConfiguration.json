@@ -2,6 +2,6 @@
   "BDEV": "https://dev.docs4cargo.at/v1/ecmr/",
   "EYAT": "https://test.docs4cargo.at/v1/ecmr/",
   "VDEV": "https://dev.ecmr.veroo.io/v1/ecmr/",
-  "VTES": "https://test.ecmr.veroo.io/v1/ecmr/",
+  "VERO": "https://test.ecmr.veroo.io/v1/ecmr/",
   "EDAT": "https://ecmr.gs1.at/v1/ecmr/"
 }
